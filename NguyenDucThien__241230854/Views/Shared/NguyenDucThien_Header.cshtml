@@ -1,0 +1,24 @@
+﻿<header class="header">
+    <div class="header_top">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index">
+                <img src="~/Content/images/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <div class="header_top_right">
+            <p>Welcome to our Online Store! <span>Cart:</span> 0 item(s) - $0.00</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="header_bottom">
+        @await Component.InvokeAsync("LoaiHangNav")
+        <div class="search_box">
+            <form method="get">
+                <input type="text" placeholder="Search" />
+                <input type="submit" value="" />
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+</header>
